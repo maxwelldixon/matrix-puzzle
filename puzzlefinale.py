@@ -38,6 +38,7 @@ def main():
 		for j in range(0,16):
 			for k in range(0,16):
 				for l in range(0,16):
+					# ensures (a[i] * b[j]) % c[k] remainder is zero.
 					if (a[i] * b[j]) % c[k] == 0:
 						# equation in the first row
 						if (a[i] * b[j]) / c[k] - d[l] == -3:
@@ -81,6 +82,7 @@ def main():
 		for j in range(0,16):
 			for k in range(0,16):
 				for l in range(0,16):
+					# ensures (a[i] + b[j]) % c[k] remainder is zero
 					if (a[i] + b[j]) % c[k] == 0: 
 						# equation in the first row
 						if (a[i] + b[j]) / c[k] + d[l] == 8:
