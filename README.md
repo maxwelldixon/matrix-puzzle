@@ -1,5 +1,5 @@
 # matrixpuzzle
-4 column by 4 row math problem matrix.
+4 column by 4 row math problem matrix. WARNING: The program, puzzlefinale.py, iterates through all possible integers in 1851 minutes 29.25 seconds (or 30.85 hours). It found a solution in approximately 5 hours.
                     
  |   | + |   | + |   | - |   | = 31|
  |---|---|---|---|---|---|---|-----|
