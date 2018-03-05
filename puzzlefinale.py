@@ -40,7 +40,7 @@ def main():
 				for l in range(0,16):
 					# ensures (a[i] * b[j]) % c[k] remainder is zero.
 					if (a[i] * b[j]) % c[k] == 0:
-						# equation in the first row
+						# equation in the second row
 						if (a[i] * b[j]) / c[k] - d[l] == -3:
 						# eliminating duplicate numbers
 							if a[i] != b[j]:
@@ -61,7 +61,7 @@ def main():
 		for j in range(0,16):
 			for k in range(0,16):
 				for l in range(0,16):
-					# equation in the first row
+					# equation in the third row
 					if a[i] + b[j] + c[k] + d[l] == 42:
 					# eliminating duplicate numbers
 						if a[i] != b[j]:
@@ -84,7 +84,7 @@ def main():
 				for l in range(0,16):
 					# ensures (a[i] + b[j]) % c[k] remainder is zero
 					if (a[i] + b[j]) % c[k] == 0: 
-						# equation in the first row
+						# equation in the fourth row
 						if (a[i] + b[j]) / c[k] + d[l] == 8:
 						# eliminating duplicate numbers
 							if a[i] != b[j]:
@@ -142,7 +142,7 @@ def main():
 																						#count += 1
 																						#print totalCount
 																						#print count
-																						# finds correct columns
+																						# finds correct columns values based on equations in columns 1-4
 																						if combosR1[i][0] + combosR2[j][0] - combosR3[k][0] + combosR4[l][0] == 5:
 																							if combosR1[i][1] + combosR2[j][1] + combosR3[k][1] + combosR4[l][1] == 51:
 																								if combosR1[i][2] + combosR2[j][2] + combosR3[k][2] - combosR4[l][2] == 35:
