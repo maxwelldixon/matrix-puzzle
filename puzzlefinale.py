@@ -97,7 +97,7 @@ def main():
 													combosR4.append([a[i], b[j], c[k], d[l]])
 													#print combosR4
 
-	# finds the unique matrices based on row combos calculated in the preceding loops
+	# finds the unique matrix based on row combos calculated in the preceding loops
 	count = 0
 	totalCount = 0
 	for i in range(0, 654):
