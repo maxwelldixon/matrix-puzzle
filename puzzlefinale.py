@@ -42,8 +42,13 @@ def main():
 		for j in range(0,16):
 			for k in range(0,16):
 				for l in range(0,16):
+					# ensures (a[i] * b[j]) % c[k] remainder is zero.
 					if (a[i] * b[j]) % c[k] == 0:
+<<<<<<< HEAD
 						# equation in row 2
+=======
+						# equation in the second row
+>>>>>>> 435229a12f5857cd79d4c60fb486ec5a4df7b7c4
 						if (a[i] * b[j]) / c[k] - d[l] == -3:
 						# eliminating duplicate numbers
 							if a[i] != b[j]:
@@ -64,7 +69,11 @@ def main():
 		for j in range(0,16):
 			for k in range(0,16):
 				for l in range(0,16):
+<<<<<<< HEAD
 					# equation in row 3
+=======
+					# equation in the third row
+>>>>>>> 435229a12f5857cd79d4c60fb486ec5a4df7b7c4
 					if a[i] + b[j] + c[k] + d[l] == 42:
 					# eliminating duplicate numbers
 						if a[i] != b[j]:
@@ -85,8 +94,13 @@ def main():
 		for j in range(0,16):
 			for k in range(0,16):
 				for l in range(0,16):
+					# ensures (a[i] + b[j]) % c[k] remainder is zero
 					if (a[i] + b[j]) % c[k] == 0: 
+<<<<<<< HEAD
 						# equation in row 4
+=======
+						# equation in the fourth row
+>>>>>>> 435229a12f5857cd79d4c60fb486ec5a4df7b7c4
 						if (a[i] + b[j]) / c[k] + d[l] == 8:
 						# eliminating duplicate numbers
 							if a[i] != b[j]:
@@ -99,7 +113,7 @@ def main():
 													combosR4.append([a[i], b[j], c[k], d[l]])
 													
 
-	# finds the unique matrices based on row combos calculated in the preceding loops
+	# finds the unique matrix based on row combos calculated in the preceding loops
 	count = 0
 	totalCount = 0
 	for i in range(0, 654):
@@ -141,7 +155,14 @@ def main():
 																				if combosR3[k][2] != combosR4[l][0] and combosR3[k][2] != combosR4[l][1] and combosR3[k][2] != combosR4[l][2] and combosR3[k][2] != combosR4[l][3]:
 																					# eliminates duplicates for R3[k][3] in columns C1, C2, C3, C4
 																					if combosR3[k][3] != combosR4[l][0] and combosR3[k][3] != combosR4[l][1] and combosR3[k][3] != combosR4[l][2] and combosR3[k][3] != combosR4[l][3]:
+<<<<<<< HEAD
 																						# finds correct columns
+=======
+																						#count += 1
+																						#print totalCount
+																						#print count
+																						# finds correct columns values based on equations in columns 1-4
+>>>>>>> 435229a12f5857cd79d4c60fb486ec5a4df7b7c4
 																						if combosR1[i][0] + combosR2[j][0] - combosR3[k][0] + combosR4[l][0] == 5:
 																							if combosR1[i][1] + combosR2[j][1] + combosR3[k][1] + combosR4[l][1] == 51:
 																								if combosR1[i][2] + combosR2[j][2] + combosR3[k][2] - combosR4[l][2] == 35:
