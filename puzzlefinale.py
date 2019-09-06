@@ -121,8 +121,8 @@ def main():
 																										count += 1
 																										elapsedTime = str(timedelta(seconds = time.time() - start))
 																										solution.append([combosR1[i], combosR2[j], combosR3[k], combosR4[l]])
-																										print(count + " solution was found in " + elapsedTime)
-																										print(totalCount + " combinations were tried.")
+																										print(f"{count} solution was found in {elapsedTime}")
+																										print(f"{totalCount} combinations were tried.")
 																										print("The solution: ")
 																										print(solution)
 																										sys.exit()
