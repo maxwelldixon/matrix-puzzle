@@ -1,5 +1,5 @@
-# matrixpuzzle [![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-370/)
-4 column by 4 row math problem matrix. The program iterates through all possible integers in 1851 minutes 29.25 seconds (or 30.85 hours). It found a solution in approximately 5 hours.
+# Matrix Puzzle [![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-370/)
+4 column by 4 row math problem matrix. The matrix-solver program brute forces a solution.
                     
  |   | + |   | + |   | - |   | = 31|
  |---|---|---|---|---|---|---|-----|
@@ -27,3 +27,5 @@
  | 5         |   |       51  |   |         35|   |         32|     |
 
 
+## ToDo
+- Create recursive solution
