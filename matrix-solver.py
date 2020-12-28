@@ -29,7 +29,7 @@ combosR4 = []
 
 solution = []
 
-def checkEquations(i,j,k,l):
+def checkEquations(i, j, k, l):
     if (
         combosR1[i][0] + combosR1[i][1] + combosR1[i][2] - combosR1[i][3] == 31
         and (combosR2[j][0] * combosR2[j][1]) % combosR2[j][2] == 0
@@ -46,8 +46,20 @@ def checkEquations(i,j,k,l):
     else:
         return False
 
-def main():
+def checkDuplicates(i, j, k, l):
+    possibleAns = [combosR1[i], combosR2[j], combosR3[k], combosR4[l]]
+    ans = set()
 
+    for combos in possibleAns:
+        for val in combos:
+            ans.add(val)
+
+    if len(ans) == 16:
+        return True
+    else:
+        return False
+
+def main():
     start = time.time()
 
     # loops that generate all possible combinations of 1-16
@@ -110,13 +122,13 @@ def main():
                 for l in range(0, 318):
                     totalCount += 1
 
-                    sys.stdout.write("total tried: {16} row 1: {0} {1} {2} {3}   |   row 2: {4} {5} {6} {7}   |   row 3: {8} {9} {10} {11}   |   row 4: {12} {13} {14} {15}  \r".format(combosR1[i][0], combosR1[i][1], combosR1[i][2], combosR1[i][3], combosR2[j][0], combosR2[j][1], combosR2[j][2], combosR2[j][3], combosR3[k][0], combosR3[k][1], combosR3[k][2], combosR3[k][3], combosR4[l][0], combosR4[l][1], combosR4[l][2], combosR4[l][3], totalCount))
-                    sys.stdout.flush()
+                    # sys.stdout.write("total tried: {16} row 1: {0} {1} {2} {3}   |   row 2: {4} {5} {6} {7}   |   row 3: {8} {9} {10} {11}   |   row 4: {12} {13} {14} {15}  \r".format(combosR1[i][0], combosR1[i][1], combosR1[i][2], combosR1[i][3], combosR2[j][0], combosR2[j][1], combosR2[j][2], combosR2[j][3], combosR3[k][0], combosR3[k][1], combosR3[k][2], combosR3[k][3], combosR4[l][0], combosR4[l][1], combosR4[l][2], combosR4[l][3], totalCount))
+                    # sys.stdout.flush()
 
-                    if checkEquations(i,j,k,l):    
+                    if checkEquations(i, j, k, l) and checkDuplicates(i, j, k, l):    
                         elapsedTime = str(timedelta(seconds = time.time() - start))
                         solution.append([combosR1[i], combosR2[j], combosR3[k], combosR4[l]])
-                        print(f"{count} solution was found in {elapsedTime}")
+                        print(f"A solution was found in {elapsedTime}")
                         print(f"{totalCount} combinations were tried.")
                         print("The solution: ")
                         print(solution)
@@ -124,4 +136,3 @@ def main():
 
 if __name__ == "__main__":
     main()			
-
